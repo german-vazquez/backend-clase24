@@ -131,7 +131,7 @@ public class PacienteDAOH2 implements IDao<Paciente>{
             PreparedStatement ps = connection.prepareStatement(SQL_BUSCAR_TODOS);
             ResultSet rs=ps.executeQuery();
             while (rs.next()){
-                domicilio=domicilioDAOH2.buscar(rs.getInt(6));
+                domicilio=domicilioDAOH2.buscar(rs.getInt(7));
                 pacientes.add(new Paciente(
                         rs.getInt(1),
                         rs.getString(2),
